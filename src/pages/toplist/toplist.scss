@@ -1,0 +1,60 @@
+
+.top-item{
+    display: flex;
+    background: #fff;
+    justify-content:space-between;
+    margin-bottom:10px;
+     
+    .top-list-imgbox{
+        width: 100px;
+        height: 100px;
+        img{
+            width: 100px;
+            height: 100px;
+        }
+    }
+    .top-item-list{
+        overflow: hidden;
+        width: 235px;
+        position: relative;
+        flex-grow: 1;
+        
+        margin:0 10px 0 15px;
+        .item-title{
+             font-size: .426667rem;
+             line-height: .933333rem;
+        }
+        .item-song{
+            color:#7F7F7F;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+             span{
+                 font-size: .373333rem;
+                 color: #000;
+             }
+        }
+        .fa-angle-right{
+            position: absolute;
+            right: .266667rem;
+            top: 45%;
+            color:#7F7F7F;
+            font-size: .466667rem;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
