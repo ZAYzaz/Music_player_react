@@ -1,0 +1,2 @@
+
+export const GET_TOPLIST_ASYNC = 'GET_TOPLIST_ASYNC'
