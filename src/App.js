@@ -11,8 +11,8 @@ class App extends Component {
       <div >
           <Switch>  
 
-                <Route path = "/list" component = {ListContainerDemo}  />
-                {/* <Route path = "/list" component = {ListContainer}  /> */}
+                {/* <Route path = "/list" component = {ListContainerDemo}  /> */}
+                <Route path = "/list" component = {ListContainer}  />
                 <Route path = "/" component = {MainContainer}  /> 
             </Switch>
       </div>
