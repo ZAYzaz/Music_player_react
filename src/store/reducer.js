@@ -1,9 +1,9 @@
 
 import { combineReducers } from 'redux'
 
-import toplist from './toplist'
+import main from './home'
 
 
 export default combineReducers({
-    toplist
+    main,
 })

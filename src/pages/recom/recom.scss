@@ -1,0 +1,38 @@
+.app-recomm-foot{
+    margin: 0 .266667rem;
+    .hot-title{
+        font-size: .426667rem;
+        color: #000;
+        margin-bottom: .293333rem;
+    }
+    .list-more{
+        height: 1.066667rem;
+        line-height: 1.066667rem;
+        text-align: center;
+        color: rgba(0,0,0,.6);
+    }
+    .bottom{
+        padding: .4rem 0;
+        .bottom-comp{
+            text-align: center;
+            margin-bottom: .426667rem;
+        }
+        .music-logo{
+            display: block;
+            width: 2.4rem;
+            height: .666667rem;
+            margin: 0 auto .266667rem;
+            background-image: url(https://y.gtimg.cn/mediastyle/mobile/yqq_v5/img/logo.png?max_age=19830212&d=20151105145423);
+            background-size: cover;
+            background-repeat: no-repeat;
+            text-align: center;
+            padding-left: .4rem;
+        }
+        .foot-p{
+            font-size: .266667rem;
+            text-align: center;
+            color: rgba(0,0,0,.5);
+        }
+    }
+}
+

@@ -1,0 +1,440 @@
+
+.fa{
+    color: #31c27c;
+  }
+  
+  img {
+    border: 0;
+  }
+  .infobox_fix{
+      position: fixed;
+      top: -190px;
+  }
+  
+  .info_box {
+  
+      
+   
+  //position: -webkit-sticky;
+    //position: sticky;
+  
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 274px;
+    overflow: hidden;
+    color: #fff;
+    background: #fff;
+    .info_box__bd {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 4;
+     // display: -webkit-box;
+      
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      .top_bar {
+        display: -webkit-box;
+        -webkit-box-align: center;
+        height: 48px;
+        padding: 0 16px 0 14px;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.2);
+        .top_bar__img {
+          display: block;
+          width: 36px;
+          margin-right: 3px;
+        }
+        .top_bar__bd {
+          -webkit-box-flex: 1;
+          .top_bar__tit {
+            line-height: 1.3;
+            font-size: 14px;
+          }
+          .top_bar__desc {
+            font-size: 10px;
+          }
+        }
+        .top_bar__btn {
+          position: relative;
+          display: block;
+          height: 24px;
+          padding: 0 12px;
+          line-height: 24px;
+          font-size: 15px;
+          color: #fff;
+        }
+        .top_bar__btn::before {
+          content: "";
+          position: absolute;
+          top: -50%;
+          left: 0;
+          z-index: 1;
+          width: 100%;
+          height: 200%;
+        }
+        .top_bar__btn::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 2;
+          -webkit-box-sizing: border-box;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+          border-style: solid;
+          border-color: currentColor;
+          border-width: 1px;
+          border-radius: 999px;
+        }
+      }
+  
+      .album {
+        display: -webkit-box;
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
+        -webkit-box-sizing: border-box;
+        width: 100%;
+        margin-top: 17px;
+        padding: 0 16px;
+        overflow: hidden;
+        .album__media {
+          position: relative;
+          width: 125px;
+          height: 125px;
+          margin-right: 10px;
+          overflow: hidden;
+          .album__cover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+          .album__media::after {
+            content: "";
+            display: block;
+            padding-top: 100%;
+          }
+        }
+        .album__bd {
+          position: relative;
+          -webkit-box-flex: 1;
+          .album__name {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            max-height: 47px;
+            line-height: 1.3;
+            overflow: hidden;
+            font-size: 18px;
+          }
+          .album__desc {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            max-height: 36px;
+            overflow: hidden;
+            margin-top: 8px;
+          }
+        }
+      }
+  
+      .opt_box {
+        display: -webkit-box;
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
+        height: 84px;
+        padding: 0 16px;
+        -webkit-transition: 1s ease-in-out;
+  
+        .btn_play_all {
+          display: -webkit-box;
+          -webkit-box-pack: center;
+          -webkit-box-align: center;
+          min-width: 130px;
+          padding: 0 20px;
+          height: 40px;
+          overflow: hidden;
+          text-align: center;
+          font-size: 16px;
+          color: #fff;
+          border-radius: 20px;
+          background: #31c27c;
+        }
+        .btn_play_all::before {
+          content: "";
+          display: block;
+          height: 0;
+          width: 0;
+          margin-right: -3px;
+          border-color: transparent transparent transparent #fff;
+          border-width: 7px 11px;
+          border-style: solid;
+          border-radius: 2px;
+        }
+        .play_bar {
+          display: -webkit-box;
+          -webkit-box-align: center;
+          width: 100%;
+          height: 46px;
+          .play_bar__aside {
+            position: relative;
+            margin-right: 8px;
+            .play_bar__icon {
+              display: block;
+              width: 46px;
+              height: 46px;
+              color: #31c27c;
+            }
+            .icon_svg {
+              display: inline-block;
+              width: 1em;
+              height: 1em;
+              stroke-width: 0;
+              stroke: currentColor;
+              fill: currentColor;
+            }
+            .progress {
+              position: absolute;
+              top: 0;
+              left: 0;
+              z-index: 2;
+              width: 46px;
+              height: 46px;
+              -webkit-transform: rotate(-90deg);
+              .progress__circle {
+                fill: none;
+                stroke: #31c27c;
+                stroke-width: 2;
+              }
+            }
+          }
+          .play_bar__bd {
+            -webkit-box-flex: 1;
+            height: 46px;
+            overflow: hidden;
+            .song_name {
+              display: -webkit-box;
+              -webkit-box-align: center;
+              .song_name__txt {
+                display: block;
+                max-width: 90%;
+                margin-right: 5px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                font-size: 14px;
+                line-height: 24px;
+                color: #fff;
+              }
+              .icon_vip {
+                display: block;
+                height: 10px;
+              }
+            }
+            .lyrics {
+              height: 18px;
+              overflow: hidden;
+            }
+          }
+          .download {
+            display: block;
+            padding: 10px;
+            margin-right: -10px;
+            .download__icon {
+              display: block;
+              width: 26px;
+              height: 26px;
+              color: #31c27c;
+            }
+          }
+        }
+      }
+    }
+  
+    .info_box__bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 3;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      -webkit-transform: scale(1.1) translateZ(0);
+      -webkit-filter: blur(36px);
+    }
+  }
+
+.mod_header  .header-content{
+    position: relative;
+    height: 44px;
+    background: #31c27c;
+    .music_logo {
+      float: left;
+      display: block;
+      width: 90px;
+      height: 25px;
+      margin: 9px 0 0 10px;
+      background-image: url(https://y.gtimg.cn/mediastyle/mobile/yqq_v5/img/logo.png?max_age=19830212&d=20151105145423);
+      background-size: cover;
+      background-repeat: no-repeat;
+      text-indent: -9999px;
+    }
+    .btn_download {
+      position: absolute;
+      display: inline-block;
+      right: 10px;
+      top: 8px;
+      height: 28px;
+      padding: 0 12px;
+      line-height: 28px;
+      border-radius: 99px;
+      font-size: 14px;
+      background: #149c5a;
+      color: #fff;
+  
+      width: auto;
+    }
+  }
+
+
+  .main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    padding-top: 274px;
+    padding-bottom: 50px;
+    overflow: hidden;
+    will-change: transform;
+    -webkit-transform: translateZ(0);
+    color:rgb(119, 119, 119);
+    .count_box {
+      position: relative;
+      display: -webkit-box;
+      -webkit-box-align: center;
+      height: 54px;
+      margin: 0 16px -10px;
+      color:rgb(119, 119, 119);
+    }
+    .qui_list {
+      overflow: hidden;
+      .qui_list__item {
+        position: relative;
+        display: -webkit-box;
+        .qui_list__order {
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-box-pack: center;
+          -webkit-box-align: center;
+          width: 45px;
+          margin-right: -16px;
+          .qui_list__decimal {
+            font-size: 16px;
+            
+          }
+        }
+        .qui_list__bd {
+          position: relative;
+          -webkit-box-flex: 1;
+          display: -webkit-box;
+          -webkit-box-align: center;
+          padding: 10px 16px;
+          overflow: hidden;
+          .qui_list__box {
+            -webkit-box-flex: 1;
+           // display: -webkit-box;
+            -webkit-box-orient: vertical;
+            .qui_list__tit {
+              font-size: 16px;
+              color: #000;
+              .qui_list__txt {
+                display: block;
+                max-width: 100%;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                
+              }
+            }
+            .qui_list__desc,
+            .qui_list__tit {
+              display: -webkit-box;
+              -webkit-box-align: center;
+              overflow: hidden;
+            }
+            .qui_list__desc{
+               color:rgb(119, 119, 119);
+            }
+          }
+        }
+      }
+    }
+    .qui_tit {
+      position: relative;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-box-pack: center;
+      -webkit-box-align: center;
+      height: 55px;
+      padding: 0 40px;
+      overflow: hidden;
+      text-align: center;
+      .qui_tit__text {
+        margin-left: 5px;
+        overflow: hidden;
+        line-height: 1.2;
+        white-space: nowrap;
+        letter-spacing: 5px;
+        font-size: 18px;
+        color: #000;
+      }
+    }
+    .intro--unfold {
+      max-height: none;
+    }
+    .intro {
+      position: relative;
+      
+      margin: 0 16px 20px;
+      overflow: hidden;
+      text-align: justify;
+      word-wrap: break-word;
+      font-size: 14px;
+    }
+    .brand {
+      padding: 20px 0;
+      .brand__logo {
+        display: block;
+        width: 32px;
+        height: 32px;
+        margin: 0 auto;
+      }
+      .brand__name {
+          margin-top: 2px;
+          text-align: center;
+          font-size: 14px;
+          font-weight: 400;
+          color: #000;
+      }
+    }
+  }
+  
+  img {
+    border: 0;
+  }
+  .qui_list--rank .qui_list__item:nth-child(-n + 3) .qui_list__decimal {
+    color: #ff400b;
+  }
